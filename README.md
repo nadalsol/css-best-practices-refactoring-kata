@@ -21,15 +21,15 @@
 
 (\*) Just write plain CSS within the existing `.scss` files and the code should work 😉
 
-## Important!
+## Keep in mind
 
 - This is a refactoring Kata so please **focus on improving the CSS code**, not the UI _look&feel_.
 
 ## Kata Install and Setup
 
-1. Clone GitHub repo: `git clone git@github.com:nadalsol/css-best-practices-refactoring-kata`.
-2. Jump into project's directory: `cd css-best-practices-refactoring-kata`.
-3. Start the Hugo server (with drafts enabled): `npm start` (which launches `hugo server -D`).
+1. Clone GitHub repo: `git clone git@github.com:nadalsol/css-best-practices-refactoring-kata`
+2. Jump into project's directory: `cd css-best-practices-refactoring-kata`
+3. Start the Hugo server (with drafts enabled): `npm start` (which launches `hugo server -D`)
 4. Navigate to http://localhost:1313/
 
 ## Kata Resources
