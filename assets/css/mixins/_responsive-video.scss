@@ -1,0 +1,23 @@
+// Responsive video mixins
+// -----------------------------------------------------------------------------
+//
+// [Fluid Width Video](https://css-tricks.com/fluid-width-video/#iframe-video-youtube-vimeo-etc)
+// 1. Fallback colour, in case no image is retrieved.
+//
+
+@mixin responsive-video {
+  @include aspect-ratio(16, 9);
+  position: relative;
+  z-index: 1;
+  border-radius: $brr-medium;
+  background-color: $c-gray-20; // 1
+  overflow: hidden;
+
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

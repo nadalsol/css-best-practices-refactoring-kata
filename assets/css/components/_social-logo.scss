@@ -1,0 +1,28 @@
+// Social logo
+// -----------------------------------------------------------------------------
+
+.social-logo {
+  @include size($social-logo-wd, $social-logo-ht);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $c-dark-medium-emphasis;
+  border-radius: 100%;
+  transition: 0.25s ease-in-out border-color;
+
+  &:hover {
+    border-color: $c-dark-high-emphasis;
+  }
+
+  @include state-focus;
+
+  &__img {
+    @include size($social-logo-icon-wd, $social-logo-icon-ht);
+    fill: $c-dark-medium-emphasis;
+    transition: 0.25s ease-in-out fill;
+  }
+
+  &:hover &__img {
+    fill: $c-dark-high-emphasis;
+  }
+}

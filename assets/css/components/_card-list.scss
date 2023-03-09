@@ -1,0 +1,34 @@
+// Card list
+// -----------------------------------------------------------------------------
+
+.card-list {
+  max-width: $container-mxwd;
+
+  @media ($medium-up) {
+    margin-left: convert-px-to-rem(-24);
+    margin-right: convert-px-to-rem(-24);
+  }
+
+  @media ($large-up) {
+    display: flex;
+    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__item {
+    @media ($large-up) {
+      flex: 1 0 0;
+      margin-left: convert-px-to-rem(12);
+      margin-right: convert-px-to-rem(12);
+    }
+  }
+
+  &__item + &__item {
+    margin-top: convert-px-to-rem(24);
+
+    @media ($large-up) {
+      margin-top: convert-px-to-rem(0);
+    }
+  }
+}

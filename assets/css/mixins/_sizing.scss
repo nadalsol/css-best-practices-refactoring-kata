@@ -1,0 +1,8 @@
+// Sizing mixins
+// -----------------------------------------------------------------------------
+
+// Sizing shortcuts
+@mixin size($wd, $ht) {
+  width: $wd;
+  height: $ht;
+}

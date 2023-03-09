@@ -1,0 +1,40 @@
+// Utility classes
+// -----------------------------------------------------------------------------
+
+//
+// Margin
+//
+@each $alignment in top, bottom {
+  // 0
+  .u-margin-#{$alignment}-0 {
+    margin-#{$alignment}: 0;
+  }
+  // 8
+  .u-margin-#{$alignment}-8 {
+    margin-#{$alignment}: convert-px-to-rem(8);
+  }
+  // 48
+  .u-margin-#{$alignment}-48 {
+    margin-#{$alignment}: convert-px-to-rem(48);
+  }
+}
+
+//
+// Text
+//
+// .u-text-truncate {
+//   @include text-truncate;
+// }
+
+// .u-text-truncate-multiline {
+//   @include text-truncate-multiline;
+// }
+
+// Align
+.u-text-align-center {
+  text-align: center;
+}
+
+.u-text-align-right {
+  text-align: right;
+}

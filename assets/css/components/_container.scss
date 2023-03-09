@@ -1,0 +1,62 @@
+// Container
+// -----------------------------------------------------------------------------
+//
+// 1. Prevent `main-container` from being overlapped by the `header`.
+//
+
+.main-container {
+  width: 100%;
+  margin-top: $header-ht; // 1
+}
+
+.container {
+  max-width: $container-mxwd;
+  margin: 0 auto;
+  padding-left: convert-px-to-rem(16);
+  padding-right: convert-px-to-rem(16);
+
+  @media ($medium-up) {
+    padding-left: convert-px-to-rem(24);
+    padding-right: convert-px-to-rem(24);
+  }
+
+  @media ($large-up) {
+    padding-left: convert-px-to-rem(32);
+    padding-right: convert-px-to-rem(32);
+  }
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &--legal {
+    max-width: convert-px-to-rem(720);
+  }
+
+  &--spaced {
+    padding-top: convert-px-to-rem(24);
+    padding-bottom: convert-px-to-rem(32);
+
+    @media ($medium-up) {
+      padding-top: convert-px-to-rem(32);
+      padding-bottom: convert-px-to-rem(48);
+    }
+
+    @media ($large-up) {
+      padding-top: convert-px-to-rem(48);
+      padding-bottom: convert-px-to-rem(64);
+    }
+  }
+}
+
+.container-large-up {
+  @media ($large-up) {
+    max-width: $container-mxwd;
+    margin: 0 auto;
+    padding-left: convert-px-to-rem(32);
+    padding-right: convert-px-to-rem(32);
+  }
+}

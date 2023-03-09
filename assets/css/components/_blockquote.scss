@@ -1,0 +1,41 @@
+//
+// Blockquote
+// -----------------------------------------------------------------------------
+
+.blockquote {
+  margin-bottom: convert-px-to-rem(48);
+
+  @media ($medium-up) {
+    padding-right: convert-px-to-rem(64);
+  }
+
+  @media ($large-up) {
+    padding-right: convert-px-to-rem(128);
+  }
+
+  &__block,
+  &__block.h4 {
+    margin-bottom: convert-px-to-rem(16);
+    font-style: italic;
+  }
+
+  &__block::before {
+    content: "“";
+    margin-right: convert-px-to-rem(-8);
+  }
+
+  &__block::after {
+    content: "”";
+    margin-left: convert-px-to-rem(-8);
+  }
+
+  &__quote {
+    display: inline;
+    margin-bottom: 0;
+  }
+
+  &__caption,
+  &__caption.subtitle-1 {
+    margin-bottom: 0;
+  }
+}

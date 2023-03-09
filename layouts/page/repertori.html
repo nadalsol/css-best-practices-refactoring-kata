@@ -1,0 +1,59 @@
+{{ define "main" }}
+<!-- prettier-ignore -->
+{{ partial "banner.html" (dict "class" "banner--repertori" "title" "Repertori") }}
+
+<div class="panel panel--centered">
+  <div class="container">
+    <!-- prettier-ignore -->
+    {{ range .Pages.ByPublishDate.Reverse }}
+    {{ $showTitle := .Title }}
+    {{ $showActive := .Params.active }}
+    <a
+      href="{{ .Permalink }}"
+      class="repertori repertori--link {{ if $showActive }}repertori--active{{ end }}"
+    >
+      <div class="repertori__media">
+        <div
+          class="o-img-aspect-ratio o-img-aspect-ratio--3x2 o-img-aspect-ratio--rounded"
+        >
+          <!-- prettier-ignore -->
+          {{ partial "retina-img.html" (dict "path" "/images/page/repertori/" "name" $showTitle "ext" "jpg" "class" "o-img-aspect-ratio__media") }}
+        </div>
+      </div>
+
+      <div class="repertori__content">
+        <div class="repertori__title">
+          <!-- prettier-ignore -->
+          {{ with .Title }}
+          <h2 class="h4 {{ if $showActive }}h4--primary{{ end }}">{{ . }}</h2>
+          {{ end }}
+          <!-- prettier-ignore -->
+          {{ if $showActive }}
+          <span class="overline">Obra actual</span>
+          {{ else }}
+          <span class="overline overline--dark-medium-emphasis"
+            >Event passat</span
+          >
+          {{ end }}
+        </div>
+        <!-- prettier-ignore -->
+        {{ with .Summary }}
+        <div class="repertori__desc body-1">
+          <p>{{ . }}</p>
+        </div>
+        {{ end }}
+        <div class="repertori__actions body-1">
+          <span
+            class="{{ if $showActive }}btn btn--primary{{ else }}link link--iconised{{ end }}"
+          >
+            <!-- prettier-ignore -->
+            {{ partial "svg/add.svg" (dict "class" "link__icon-start") }}
+            Llegir més…
+          </span>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

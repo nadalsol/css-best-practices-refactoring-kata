@@ -1,0 +1,8 @@
+// Centering mixins
+// -----------------------------------------------------------------------------
+
+@mixin block-centering() {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

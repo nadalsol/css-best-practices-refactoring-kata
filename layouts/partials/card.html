@@ -1,0 +1,10 @@
+<div class="card">
+  <img
+    class="card__img"
+    src="{{ .Site.BaseURL }}{{ with .path }}{{ . }}{{ end }}"
+    alt="{{ with .title }}{{ . }}{{ end }}"
+  />
+  <h3 class="card__title subtitle-1 subtitle-1--primary">
+    {{ with .title }}{{ . }}{{ end }}
+  </h3>
+</div>

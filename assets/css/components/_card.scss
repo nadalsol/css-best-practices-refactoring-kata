@@ -1,0 +1,36 @@
+// Card
+// -----------------------------------------------------------------------------
+
+.card {
+  background-color: $c-gray-10;
+  border-radius: $brr-medium;
+  overflow: hidden;
+
+  &--link {
+    @include block-link;
+    transition: transform 0.25s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(0.98);
+    }
+
+    @include state-focus;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: convert-px-to-rem(90);
+    margin-bottom: 0;
+  }
+
+  .subtitle-1 {
+    margin-bottom: 0;
+  }
+}

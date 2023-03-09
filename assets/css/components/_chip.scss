@@ -1,0 +1,25 @@
+// Chip
+// -----------------------------------------------------------------------------
+
+.chip {
+  @include typography(
+    $chip-ff,
+    $chip-fz,
+    $chip-fw,
+    $chip-lh,
+    $chip-ls,
+    $chip-tt
+  );
+  color: $chip-c;
+  background-color: $chip-bg;
+  display: inline-block;
+  padding: convert-px-to-rem(10) convert-px-to-rem(12);
+  margin-top: convert-px-to-rem(3);
+  margin-bottom: convert-px-to-rem(3);
+  border-radius: 18px;
+
+  &--primary {
+    color: $c-primary;
+    background-color: $c-primary-08;
+  }
+}

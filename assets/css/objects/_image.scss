@@ -1,0 +1,42 @@
+// Image objects
+// -----------------------------------------------------------------------------
+//
+// 1. Fallback colour, in case no image is retrieved.
+//
+
+// .o-img-circle {
+//   border-radius: 50%;
+// }
+
+.o-img-responsive {
+  @include img-responsive;
+}
+
+.o-img-responsive-full {
+  @include img-responsive-full;
+}
+
+.o-img-aspect-ratio {
+  line-height: 0;
+  background-color: $c-gray-20; // 1
+  overflow: hidden;
+
+  &__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &--3x2 {
+    @include aspect-ratio(3, 2);
+  }
+
+  &--rounded {
+    border-radius: $brr-medium;
+  }
+
+  &--op-right &__media {
+    object-position: right;
+  }
+}

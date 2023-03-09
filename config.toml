@@ -1,0 +1,21 @@
+baseURL = 'http://arnauvilardebo.com/'
+languageCode = 'ca'
+title = 'Arnau Vilardebò'
+# googleAnalytics = "G-L7JWLSG243"
+# theme = "ananke"
+# TODO : change `enableRobotsTXT` to `true` when final copy is in
+enableRobotsTXT = false
+summaryLength = 25
+removePathAccents = true
+
+[params]
+  # favicon = ""
+  description = "Contaire"
+
+  # Company info
+  companyEmail = "kerdistos88@gmail.com"
+  companyPhone = "34 607 780 402"
+
+  # Social links
+  facebook = "https://www.facebook.com/arnau.vilardebo/"
+  youtube = "https://www.youtube.com/channel/UCLlxu5ViHkLIOIRTBGNdNpw"

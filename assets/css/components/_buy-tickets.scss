@@ -1,0 +1,24 @@
+// Buy tickets
+// -----------------------------------------------------------------------------
+
+.buy-tickets {
+  @media ($large-up) {
+    display: flex;
+  }
+
+  &__content {
+    margin-bottom: convert-px-to-rem(32);
+
+    @media ($large-up) {
+      flex: 1 0 60%;
+      margin-bottom: 0;
+      padding-right: convert-px-to-rem(80);
+    }
+  }
+
+  &__actions {
+    @media ($large-up) {
+      flex: 1 0 40%;
+    }
+  }
+}

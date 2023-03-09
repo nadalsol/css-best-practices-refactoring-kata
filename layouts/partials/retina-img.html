@@ -1,0 +1,24 @@
+<!-- prettier-ignore -->
+<img
+  src="{{ with .path }}{{ .| urlize }}{{ end }}{{ with .name }}{{ .| urlize }}{{ end }}.{{ with .ext }}{{ . }}{{ end }}"
+  {{ with .name }}alt="{{ . }}"{{ end }}
+  {{ with .class }}class="{{ . }}"{{ end }}
+  {{ with .width }}width="{{ . }}"{{ end }}
+  {{ with .height }}height="{{ . }}"{{ end }}
+/>
+
+{{/* TODO : Uncomment this code when retina images are available */}} {{/*
+<!-- prettier-ignore -->
+<img
+  srcset="
+    {{ with .path }}{{ .| urlize }}{{ end }}{{ with .name }}{{ .| urlize }}{{ end }}.{{ with .ext }}{{ . }}{{ end }}    1x,
+    {{ with .path }}{{ .| urlize }}{{ end }}{{ with .name }}{{ .| urlize }}{{ end }}@2x.{{ with .ext }}{{ . }}{{ end }} 2x,
+    {{ with .path }}{{ .| urlize }}{{ end }}{{ with .name }}{{ .| urlize }}{{ end }}@3x.{{ with .ext }}{{ . }}{{ end }} 3x
+  "
+  src="{{ with .path }}{{ .| urlize }}{{ end }}{{ with .name }}{{ .| urlize }}{{ end }}.{{ with .ext }}{{ . }}{{ end }}"
+  {{ with .name }}alt="{{ . }}"{{ end }}
+  {{ with .class }}class="{{ . }}"{{ end }}
+  {{ with .width }}width="{{ . }}"{{ end }}
+  {{ with .height }}height="{{ . }}"{{ end }}
+/>
+*/}}

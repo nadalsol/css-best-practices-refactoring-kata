@@ -1,0 +1,23 @@
+{{ define "main" }}
+<!-- prettier-ignore -->
+{{ partial "banner.html" (dict "class" "banner--coses-del-cel" "title" "Coses del cel") }}
+
+<div class="panel panel--centered">
+  <div class="container">
+    <!-- prettier-ignore -->
+    {{ partial "blockquote.html" (dict "citeUrl" "https://bit.ly/3EdZuWt" "text" "El libro de historia más enorme y hermoso que imaginarse pueda es el cielo estrellado, porque la luz guarda memoria de todo lo acaecido en el Universo en los 15.000 millones de años." "author" "José María Delgado Garcia" "citeText" "Catedràtic de Fisiologia") }}
+    {{ partial "coses-del-cel/constellacions.html" . }}
+    {{ partial "coses-del-cel/noves-constellacions.html" . }}
+    {{ partial "coses-del-cel/exoplanetes.html" . }}
+    {{ partial "coses-del-cel/planetes.html" . }}
+    {{ partial "coses-del-cel/via-lactia.html" . }}
+    {{ partial "coses-del-cel/altres-galaxies.html" . }}
+    {{ partial "coses-del-cel/meteorits-i-asteroides.html" . }}
+    {{ partial "coses-del-cel/cosmologia.html" . }}
+    {{ partial "coses-del-cel/exploracio-espai.html" . }}
+    {{ partial "coses-del-cel/efemerides-astronomiques.html" . }}
+    {{ partial "coses-del-cel/historia-i-ciencia.html" . }}
+    {{ partial "coses-del-cel/material-astronomic.html" . }}
+  </div>
+</div>
+{{ end }}

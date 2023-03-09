@@ -1,0 +1,25 @@
+// Media object
+// -----------------------------------------------------------------------------
+
+.o-media {
+  @include block-link(flex);
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media ($large-up) {
+    flex-wrap: nowrap;
+  }
+
+  &__media {
+    max-width: 100%;
+    border-radius: $brr-medium;
+
+    @media ($large-up) {
+      margin-right: convert-px-to-rem(16);
+    }
+  }
+
+  // &__content {
+  //   //
+  // }
+}

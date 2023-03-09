@@ -1,0 +1,39 @@
+<!-- prettier-ignore -->
+<div class="buy-tickets">
+  {{ with .content }}
+  <div class="buy-tickets__content content">
+    {{ . }}
+  </div>
+  {{ end }}
+  <div class="buy-tickets__actions">
+    {{ if .active }}
+    <span class="overline">Obra actual</span>
+    {{ else }}
+    <span class="overline overline--dark-medium-emphasis"
+      >Event passat</span
+    >
+    {{ end }}
+    <h2 class="h4">
+      Reserves
+      <span class="h4__primary">amb descompte</span>
+    </h2>
+    <a
+      class="btn btn--ghost btn--large btn--full {{ if and (.phone) (.active) }}{{ else }}is-disabled{{ end }}"
+      href="tel:{{ replaceRE "(\\s)" "" .phone }}"
+    >
+      <!-- prettier-ignore -->
+      {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+      +{{ .phone }}
+    </a>
+    <a
+      class="btn btn--primary btn--large btn--full {{ if and (.ticketsUrl) (.active) }}{{ else }}is-disabled{{ end }}"
+      href="{{ .ticketsUrl }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <!-- prettier-ignore -->
+      {{ partial "svg/local-activity.svg" (dict "class" "btn__icon-start") }}
+      Comprar entrades
+    </a>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+// List
+// -----------------------------------------------------------------------------
+
+.bulleted-list {
+  list-style: disc;
+
+  > li {
+    list-style-position: inside;
+
+    + li {
+      margin-top: convert-px-to-rem(16);
+    }
+  }
+}
+
+.checked-list {
+  text-align: left;
+
+  > li {
+    padding-left: convert-px-to-rem(32);
+    @include bg-img(
+      "",
+      "search_24px_rounded",
+      "png",
+      transparent,
+      transparent,
+      transparent,
+      transparent,
+      left,
+      center,
+      convert-px-to-rem(24)
+    );
+
+    + li {
+      margin-top: convert-px-to-rem(8);
+    }
+  }
+}

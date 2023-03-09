@@ -1,0 +1,32 @@
+<!-- prettier-ignore -->
+{{ range first 1 (where (where (where site.RegularPages "Section" "repertori") "Draft" false) ".Params.active" true) }}
+<!-- prettier-ignore -->
+<section
+  class="hero"
+  {{ with .Params.image }}style="background-image: url('/images/page/repertori/{{ . }}');"{{ end }}
+>
+  <div class="container">
+    <div class="hero__title">
+      <!-- prettier-ignore -->
+      {{ with .Title }}
+      <h1 class="h3 h3--light">{{ . }}</h1>
+      {{ end }}
+    </div>
+    <div class="hero__content">
+      <!-- prettier-ignore -->
+      {{ with .Description }}
+      <h2 class="subtitle-1 subtitle-1--light">{{ . }}</h2>
+      {{ end }}
+      <!-- prettier-ignore -->
+      {{ with .Summary }}
+      <p class="body-1 body-1--light">{{ . }}</p>
+      {{ end }}
+      <a href="{{ .Permalink }}" class="btn btn--primary">
+        <!-- prettier-ignore -->
+        {{ partial "svg/add.svg" (dict "class" "btn__icon-start") }}
+        Llegir més…
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

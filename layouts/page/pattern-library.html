@@ -1,0 +1,387 @@
+{{ define "main" }}
+<div class="no-public container">
+  <h1 class="h3">Pattern Library</h1>
+
+  <section>
+    <h2 class="h4">Typography</h2>
+    <div>
+      <span class="chip">Heading 3 (aka h3)</span>
+      <p class="h3">This is for component and layout headings.</p>
+      <p class="h3">
+        This is for
+        <span class="h3__underline">component and layout</span> headings.
+      </p>
+      <p class="h3 h3--primary">This is for component and layout headings.</p>
+      <p class="h3 h3--primary">
+        This is for
+        <span class="h3__underline">component and layout</span> headings.
+      </p>
+    </div>
+    <div>
+      <span class="chip">Heading 4 (aka h4)</span>
+      <p class="h4">This is for component and layout headings.</p>
+      <p class="h4 h4--primary">This is for component and layout headings.</p>
+      <div class="contrast">
+        <p class="h4 h4--light">This is for component and layout headings.</p>
+      </div>
+      <p class="h4 h4--dark-medium-emphasis">
+        This is for component and layout headings.
+      </p>
+      <p class="h4">
+        This is for
+        <span class="h4__primary">component and layout headings.</span>
+      </p>
+      <p class="h4">
+        This is for
+        <span class="h4__dark-high-emphasis"
+          >component and layout headings.</span
+        >
+      </p>
+    </div>
+    <div>
+      <span class="chip">Heading 5 (aka h5)</span>
+      <p class="h5">This is for component and layout headings.</p>
+    </div>
+    <div>
+      <span class="chip">Heading 6 (aka h6)</span>
+      <p class="h6">This is for component and layout headings.</p>
+      <p class="h6 h6--bold">This is for component and layout headings.</p>
+      <div class="contrast">
+        <p class="h6 h6--light">This is for component and layout headings.</p>
+      </div>
+    </div>
+    <div>
+      <span class="chip">subtitle-1</span>
+      <p class="subtitle-1">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+      <p class="subtitle-1 subtitle-1--primary">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+      <div class="contrast">
+        <p class="subtitle-1 subtitle-1--light">
+          This is for short paragraphs with no more than four lines and is
+          commonly used in components.
+        </p>
+      </div>
+    </div>
+    <div>
+      <span class="chip">subtitle-2</span>
+      <p class="subtitle-2">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+      <p class="subtitle-2 subtitle-2--dark-medium-emphasis">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+      <p class="subtitle-2 subtitle-2--bold">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+    </div>
+    <div>
+      <span class="chip">body-1</span>
+      <p class="body-1">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+      <p class="body-1 body-1--dark">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+      <div class="contrast">
+        <p class="body-1 body-1--light">
+          This is for short paragraphs with no more than four lines and is
+          commonly used in components.
+        </p>
+      </div>
+      <p class="body-1 body-1--dark-medium-emphasis">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+      <p class="body-1 body-1--bold">
+        This is for short paragraphs with no more than four lines and is
+        commonly used in components.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h4">Button</h2>
+
+    <span class="chip">Button</span>
+    <div>
+      <button class="btn btn--ghost">Button ghost</button>
+      <button class="btn btn--primary">Button primary</button>
+      <button class="btn btn--secondary">Button secondary</button>
+    </div>
+    <div>
+      <button class="btn btn--ghost" disabled>Button ghost</button>
+      <button class="btn btn--primary" disabled>Button primary</button>
+      <button class="btn btn--secondary" disabled>Button secondary</button>
+    </div>
+
+    <span class="chip">Button (icon + text)</span>
+    <div>
+      <button class="btn btn--ghost">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button ghost
+      </button>
+      <button class="btn btn--primary">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button primary
+      </button>
+      <button class="btn btn--secondary">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button secondary
+      </button>
+    </div>
+    <div>
+      <button class="btn btn--ghost" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button ghost
+      </button>
+      <button class="btn btn--primary" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button primary
+      </button>
+      <button class="btn btn--secondary" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button secondary
+      </button>
+    </div>
+
+    <span class="chip">Button (icon only)</span>
+    <div>
+      <button class="btn btn--ghost btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--primary btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--secondary btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--transparent btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+    </div>
+    <div>
+      <button class="btn btn--ghost btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--primary btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--secondary btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--transparent btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+    </div>
+
+    <span class="chip">Button (large)</span>
+    <div>
+      <button class="btn btn--ghost btn--large">Button ghost</button>
+      <button class="btn btn--primary btn--large">Button primary</button>
+      <button class="btn btn--secondary btn--large">Button secondary</button>
+    </div>
+    <div>
+      <button class="btn btn--ghost btn--large" disabled>Button ghost</button>
+      <button class="btn btn--primary btn--large" disabled>
+        Button primary
+      </button>
+      <button class="btn btn--secondary btn--large" disabled>
+        Button secondary
+      </button>
+    </div>
+
+    <span class="chip">Button (large, icon + text)</span>
+    <div>
+      <button class="btn btn--ghost btn--large">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button ghost
+      </button>
+      <button class="btn btn--primary btn--large">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button primary
+      </button>
+      <button class="btn btn--secondary btn--large">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button secondary
+      </button>
+    </div>
+    <div>
+      <button class="btn btn--ghost btn--large" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button ghost
+      </button>
+      <button class="btn btn--primary btn--large" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button primary
+      </button>
+      <button class="btn btn--secondary btn--large" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "btn__icon-start") }}
+        Button secondary
+      </button>
+    </div>
+
+    <span class="chip">Button (large, icon only)</span>
+    <div>
+      <button class="btn btn--ghost btn--large btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--primary btn--large btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--secondary btn--large btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--transparent btn--large btn--icon-only">
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+    </div>
+    <div>
+      <button class="btn btn--ghost btn--large btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--primary btn--large btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--secondary btn--large btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+      <button class="btn btn--transparent btn--large btn--icon-only" disabled>
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" }}
+      </button>
+    </div>
+
+    <span class="chip">Button (full width)</span>
+    <div>
+      <button class="btn btn--ghost btn--full">Button ghost</button>
+      <button class="btn btn--primary btn--full">Button primary</button>
+      <button class="btn btn--secondary btn--full">Button secondary</button>
+    </div>
+    <div>
+      <button class="btn btn--ghost btn--full" disabled>Button ghost</button>
+      <button class="btn btn--primary btn--full" disabled>
+        Button primary
+      </button>
+      <button class="btn btn--secondary btn--full" disabled>
+        Button secondary
+      </button>
+    </div>
+
+    <span class="chip">Button (large, full width)</span>
+    <div>
+      <button class="btn btn--ghost btn--large btn--full">Button ghost</button>
+      <button class="btn btn--primary btn--large btn--full">
+        Button primary
+      </button>
+      <button class="btn btn--secondary btn--large btn--full">
+        Button secondary
+      </button>
+    </div>
+    <div>
+      <button class="btn btn--ghost btn--large btn--full" disabled>
+        Button ghost
+      </button>
+      <button class="btn btn--primary btn--large btn--full" disabled>
+        Button primary
+      </button>
+      <button class="btn btn--secondary btn--large btn--full" disabled>
+        Button secondary
+      </button>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h4">Card</h2>
+    <div>
+      <span class="chip">Card</span>
+      <div style="width: 33.333%">
+        <!-- prettier-ignore -->
+        {{ partial "card.html" (dict "path" "/images/placeholder-355x266.png" "title" "Lorem ipsum dolor") }}
+      </div>
+    </div>
+    <div>
+      <span class="chip">Card with link</span>
+      <div style="width: 33.333%">
+        <!-- prettier-ignore -->
+        {{ partial "card-link.html" (dict "link" "/" "path" "/images/placeholder-355x266.png" "title" "Lorem ipsum dolor") }}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="h4">Chip</h2>
+    <ul class="chip-list">
+      <li class="chip-list__item">
+        <span class="chip">Chip</span>
+      </li>
+      <li class="chip-list__item">
+        <span class="chip chip--primary">Chip primary</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="h4">List</h2>
+    <div>
+      <span class="chip">Bulleted list</span>
+      <ul class="bulleted-list body-1">
+        <li>Browsing our Sites</li>
+        <li>Account creation/management</li>
+        <li>Direct engagement with our services or communications channels</li>
+        <li>Participation in promotional activity on our Sites</li>
+        <li>
+          End to end in the order process (from search through to payment &
+          delivery)
+        </li>
+      </ul>
+    </div>
+    <div>
+      <span class="chip">Checked list</span>
+      <ul class="checked-list body-1">
+        <li>Over 6,000 decorating products</li>
+        <li>Live stock availability from local merchants</li>
+        <li>Competitive trade prices</li>
+        <li>Rapid delivery service</li>
+        <li>Valuable time saving</li>
+      </ul>
+    </div>
+  </section>
+</div>
+{{ end }}

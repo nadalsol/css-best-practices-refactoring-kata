@@ -1,0 +1,162 @@
+// Button
+// -----------------------------------------------------------------------------
+
+.btn {
+  @include typography(
+    $button-ff,
+    $button-fz,
+    $button-fw,
+    $button-lh,
+    $button-ls,
+    $button-tt
+  );
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-height: convert-px-to-rem(40);
+  padding-left: convert-px-to-rem(16);
+  padding-right: convert-px-to-rem(16);
+  border-radius: convert-px-to-rem(8);
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  transition: 0.25s ease-in-out background-color, 0.25s ease-in-out border-color,
+    0.25s ease-in-out color;
+
+  > svg {
+    fill: currentColor;
+  }
+
+  // Primary variant
+  &--primary {
+    background-color: $button-primary-bg;
+    border: convert-px-to-rem(1) solid $button-primary-br;
+    color: $button-primary-c;
+
+    &:hover {
+      background-color: $button-primary-hover-bg;
+      border-color: $button-primary-hover-br;
+      color: $button-primary-hover-c;
+    }
+
+    @include state-focus($c-light);
+  }
+
+  // Secondary variant
+  &--secondary {
+    background-color: $button-secondary-bg;
+    border: convert-px-to-rem(1) solid $button-secondary-br;
+    color: $button-secondary-c;
+
+    &:hover {
+      background-color: $button-secondary-hover-bg;
+      border-color: $button-secondary-hover-br;
+      color: $button-secondary-hover-c;
+    }
+
+    @include state-focus;
+  }
+
+  // Ghost variant
+  &--ghost {
+    background-color: $button-ghost-bg;
+    border: convert-px-to-rem(1) solid $button-ghost-br;
+    color: $button-ghost-c;
+
+    &:hover {
+      background-color: $button-ghost-hover-bg;
+      border-color: $button-ghost-hover-br;
+      color: $button-ghost-hover-c;
+    }
+
+    @include state-focus($c-light);
+  }
+
+  // Back To Top variant
+  &--back-to-top {
+    position: fixed;
+    bottom: convert-px-to-rem(16);
+    right: convert-px-to-rem(16);
+    z-index: $zi-600;
+    transition: opacity 0.11s ease-in-out, visibility 0.11s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+
+    @media ($medium-up) {
+      bottom: convert-px-to-rem(32);
+      right: convert-px-to-rem(32);
+    }
+
+    &.is-invisible {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  // Transparent variant
+  &--transparent {
+    background-color: $button-transparent-bg;
+    border: convert-px-to-rem(1) solid $button-transparent-br;
+
+    &:hover {
+      background-color: $button-transparent-hover-bg;
+      border-color: $button-transparent-hover-br;
+    }
+
+    @include state-focus($c-light);
+  }
+
+  // Icon + text
+  &__icon-start {
+    margin-right: convert-px-to-rem(8);
+  }
+
+  // Icon only
+  &--icon-only,
+  &--icon-only.btn--large {
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &--icon-only {
+    min-width: convert-px-to-rem(48);
+    min-height: convert-px-to-rem(48);
+  }
+
+  &--icon-only.btn--large {
+    min-width: convert-px-to-rem(56);
+    min-height: convert-px-to-rem(56);
+  }
+
+  // Size
+  &--large {
+    min-height: convert-px-to-rem(56);
+    padding-left: convert-px-to-rem(24);
+    padding-right: convert-px-to-rem(24);
+    border-radius: convert-px-to-rem(12);
+    font-size: $button-fz-large;
+  }
+
+  &--large &__icon-start {
+    width: convert-px-to-rem(32);
+    height: convert-px-to-rem(32);
+    margin-right: convert-px-to-rem(12);
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--full + &--full {
+    margin-top: convert-px-to-rem(8);
+  }
+
+  // Disabled state
+  &.is-disabled,
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+    filter: grayscale(1);
+  }
+}

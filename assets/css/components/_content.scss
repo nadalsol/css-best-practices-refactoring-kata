@@ -1,0 +1,43 @@
+// Content
+// -----------------------------------------------------------------------------
+//
+// Applying typographic styles based on context: everything written by content
+// creators within the `content` container will inherit these styles.
+//
+
+.content {
+  h2 {
+    @extend .h4;
+  }
+
+  h3 {
+    @extend .h6;
+  }
+
+  h4 {
+    @extend .subtitle-1;
+  }
+
+  p,
+  ul {
+    @extend .body-1;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  ul {
+    @extend .bulleted-list;
+
+    ul {
+      margin-top: convert-px-to-rem(12);
+      margin-bottom: convert-px-to-rem(12);
+      margin-left: convert-px-to-rem(24);
+    }
+  }
+
+  a {
+    @extend .link;
+  }
+}

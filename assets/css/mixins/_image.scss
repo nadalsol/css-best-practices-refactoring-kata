@@ -1,0 +1,79 @@
+// Image mixins
+// -----------------------------------------------------------------------------
+
+//
+// Responsive images
+//
+// Keep images from scaling beyond the width of their parents
+@mixin img-responsive($display: block) {
+  display: $display;
+  max-width: 100%;
+  height: auto;
+}
+
+// Full width images
+@mixin img-responsive-full() {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+//
+// Background image + Background gradient
+//
+// Based on:
+// [Improving Perceived Performance with Multiple Background Images](https://csswizardry.com/2016/10/improving-perceived-performance-with-multiple-background-images/).
+// [Color Extractor tool](http://www.louisbourque.ca/Color-Extractor/).
+// [Using retina images](https://stackoverflow.com/questions/28374359/media-queries-for-2x-3x-and-4x-images).
+//
+// 1. Background image @1x + Background gradient.
+// 2. Background image @2x (pixel ratio of 1.25+) + Background gradient.
+//
+//
+@mixin bg-img(
+  $path,
+  $name,
+  $ext,
+  $bg-color-1: $c-gray-80,
+  $bg-color-2: $c-gray-80,
+  $bg-color-3: $c-gray-80,
+  $bg-color-4: $c-gray-80,
+  $bg-pos-x: center,
+  $bg-pos-y: center,
+  $bg-size: cover
+) {
+  $at1x_path: "#{$img-path}#{$path}#{$name}.#{$ext}";
+  // $at2x_path: "#{$img-path}#{$path}#{$name}@2x.#{$ext}";
+
+  background-position-x: $bg-pos-x;
+  background-position-y: $bg-pos-y;
+  background-size: $bg-size;
+  background-repeat: no-repeat;
+
+  // 1
+  background-image: url("#{$at1x_path}"),
+    linear-gradient(
+      to right,
+      $bg-color-1 0%,
+      $bg-color-2 50%,
+      $bg-color-3 75%,
+      $bg-color-4 100%
+    );
+
+  // TODO : Uncomment this code when retina images are available
+  // 2
+  // @media only screen and (-o-min-device-pixel-ratio: 5/4),
+  //   only screen and (-webkit-min-device-pixel-ratio: 1.25),
+  //   only screen and (min--moz-device-pixel-ratio: 1.25),
+  //   only screen and (min-device-pixel-ratio: 1.25),
+  //   only screen and (min-resolution: 1.25dppx) {
+  //   background-image: url("#{$at2x_path}"),
+  //     linear-gradient(
+  //       to right,
+  //       $bg-color-1 0%,
+  //       $bg-color-2 50%,
+  //       $bg-color-3 75%,
+  //       $bg-color-4 100%
+  //     );
+  // }
+}

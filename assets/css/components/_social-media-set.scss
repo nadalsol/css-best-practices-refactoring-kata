@@ -1,0 +1,12 @@
+// Social media set
+// -----------------------------------------------------------------------------
+
+.social-media-set {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+
+  &__item {
+    margin-right: convert-px-to-rem(12);
+  }
+}

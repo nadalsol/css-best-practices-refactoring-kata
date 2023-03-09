@@ -1,0 +1,11 @@
+// Convert units functions
+// -----------------------------------------------------------------------------
+
+//
+// Pixels to rems
+//
+$browser-context: 16; // default
+
+@function convert-px-to-rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}

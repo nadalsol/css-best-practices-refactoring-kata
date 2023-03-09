@@ -1,0 +1,11 @@
+// Typography mixins
+// -----------------------------------------------------------------------------
+
+@mixin typography($ff, $fz, $fw, $lh, $ls, $tt) {
+  font-family: $ff;
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-transform: $tt;
+}

@@ -1,0 +1,35 @@
+<div class="hire-me">
+  <div class="hire-me__content">
+    <h2 class="h4 h4--light">Contractacions</h2>
+    <p class="body-1 body-1--light">
+      Podeu contractar espectacles per adults i per adolescents. Les
+      representacions poden ser als teatres o espais que disposeu. També podem
+      venir directament a les aules de les vostres escoles.
+    </p>
+    <p class="subtitle-1 u-margin-bottom-8">
+      <a
+        class="link link--light link--iconised"
+        href="mailto:{{ .Site.Params.companyEmail }}"
+      >
+        <!-- prettier-ignore -->
+        {{ partial "svg/email.svg" (dict "class" "link__icon-start") }}
+        {{ .Site.Params.companyEmail }}
+      </a>
+    </p>
+    <p class="h6">
+      <a
+        class="link link--light link--iconised"
+        href="tel:{{ replaceRE "(\\s)" "" .Site.Params.companyPhone }}"
+      >
+        <!-- prettier-ignore -->
+        {{ partial "svg/phone.svg" (dict "class" "link__icon-start") }}
+        +{{ .Site.Params.companyPhone }}
+      </a>
+    </p>
+    <p class="body-1 body-1--light u-margin-bottom-0">Disposem d’espai de representació a Barcelona per fins a 33 espectadors.</p>
+  </div>
+  <div class="hire-me__media">
+    <!-- prettier-ignore -->
+    {{ partial "retina-img.html" (dict "path" "/images/page/index/" "name" "Contractacions" "ext" "jpg" "class" "hire-me__img" ) }}
+  </div>
+</div>

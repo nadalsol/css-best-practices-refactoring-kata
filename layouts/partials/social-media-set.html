@@ -1,0 +1,24 @@
+<ul class="social-media-set">
+  <li class="social-media-set__item">
+    <a
+      class="social-logo"
+      href="{{ .Site.Params.facebook }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <!-- prettier-ignore -->
+      {{ partial "svg/social-facebook-logo.svg" (dict "class" "social-logo__img") }}
+    </a>
+  </li>
+  <li class="social-media-set__item">
+    <a
+      class="social-logo"
+      href="{{ .Site.Params.youtube }}"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <!-- prettier-ignore -->
+      {{ partial "svg/social-youtube-logo.svg" (dict "class" "social-logo__img") }}
+    </a>
+  </li>
+</ul>

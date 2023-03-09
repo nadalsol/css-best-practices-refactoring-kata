@@ -1,0 +1,223 @@
+// Typography
+// -----------------------------------------------------------------------------
+
+// Heading
+// .h1 {
+//   @include typography($h1-ff, $h1-fz, $h1-fw, $h1-lh, $h1-ls, $h1-tt);
+//   color: $h1-c;
+// }
+
+// .h2 {
+//   @include typography($h2-ff, $h2-fz, $h2-fw, $h2-lh, $h2-ls, $h2-tt);
+//   color: $h2-c;
+// }
+
+.h3 {
+  @include typography($h3-ff, $h3-fz, $h3-fw, $h3-lh, $h3-ls, $h3-tt);
+  color: $h3-c;
+  margin-bottom: convert-px-to-rem(48);
+
+  @media ($medium-up) {
+    font-size: $h3-fz-md;
+    line-height: $h3-lh-md;
+  }
+
+  &--primary {
+    color: $c-primary;
+  }
+
+  &--light {
+    color: $c-light;
+  }
+
+  &__underline {
+    text-decoration: underline;
+  }
+}
+
+.h4 {
+  @include typography($h4-ff, $h4-fz, $h4-fw, $h4-lh, $h4-ls, $h4-tt);
+  color: $h4-c;
+  margin-bottom: convert-px-to-rem(32);
+
+  &--primary {
+    color: $c-primary;
+  }
+
+  &--light {
+    color: $c-light;
+  }
+
+  &--dark-medium-emphasis {
+    color: $c-dark-medium-emphasis;
+  }
+
+  &__primary,
+  &__dark-high-emphasis {
+    @include typography($h5-ff, $h5-fz, $h5-fw, $h5-lh, $h5-ls, $h5-tt);
+    display: block;
+
+    @media ($medium-up) {
+      display: inline;
+    }
+  }
+
+  &__primary {
+    color: $c-primary;
+  }
+
+  &__dark-high-emphasis {
+    color: $c-dark-high-emphasis;
+  }
+}
+
+.h5 {
+  @include typography($h5-ff, $h5-fz, $h5-fw, $h5-lh, $h5-ls, $h5-tt);
+  color: $h5-c;
+  margin-bottom: convert-px-to-rem(32);
+}
+
+.h6 {
+  @include typography(
+    $body-1-ff,
+    $body-1-fz,
+    $body-1-fw,
+    $body-1-lh,
+    $body-1-ls,
+    $body-1-tt
+  );
+  color: $body-1-c;
+  margin-bottom: convert-px-to-rem(32);
+
+  @media ($medium-up) {
+    @include typography($h6-ff, $h6-fz, $h6-fw, $h6-lh, $h6-ls, $h6-tt);
+    color: $h6-c;
+  }
+
+  &--light {
+    color: $c-light;
+  }
+
+  &--bold {
+    font-weight: $fw-bold;
+  }
+}
+
+// Subtitle
+.subtitle-1 {
+  @include typography(
+    $subtitle-1-ff,
+    $subtitle-1-fz,
+    $subtitle-1-fw,
+    $subtitle-1-lh,
+    $subtitle-1-ls,
+    $subtitle-1-tt
+  );
+  color: $subtitle-1-c;
+  margin-bottom: convert-px-to-rem(32);
+
+  &--primary {
+    color: $c-primary;
+  }
+
+  &--light {
+    color: $c-light;
+  }
+}
+
+.subtitle-2 {
+  @include typography(
+    $subtitle-2-ff,
+    $subtitle-2-fz,
+    $subtitle-2-fw,
+    $subtitle-2-lh,
+    $subtitle-2-ls,
+    $subtitle-2-tt
+  );
+  color: $subtitle-2-c;
+  margin-bottom: convert-px-to-rem(32);
+
+  &--dark-medium-emphasis {
+    color: $c-dark-medium-emphasis;
+  }
+
+  &--bold {
+    font-weight: $fw-semi-bold;
+  }
+}
+
+// Body
+.body-1 {
+  @include typography(
+    $body-1-ff,
+    $body-1-fz,
+    $body-1-fw,
+    $body-1-lh,
+    $body-1-ls,
+    $body-1-tt
+  );
+  color: $body-1-c;
+  margin-bottom: convert-px-to-rem(32);
+
+  &--dark {
+    color: $c-dark;
+  }
+
+  &--light {
+    color: $c-light;
+  }
+
+  &--dark-medium-emphasis {
+    color: $c-dark-medium-emphasis;
+  }
+
+  &--bold {
+    font-weight: $fw-bold;
+  }
+}
+
+// .body-2 {
+//   @include typography(
+//     $body-2-ff,
+//     $body-2-fz,
+//     $body-2-fw,
+//     $body-2-lh,
+//     $body-2-ls,
+//     $body-2-tt
+//   );
+//   color: $body-2-c;
+
+//   &--dark {
+//     color: $c-dark;
+//   }
+// }
+
+// Caption
+// .caption {
+//   @include typography(
+//     $caption-ff,
+//     $caption-fz,
+//     $caption-fw,
+//     $caption-lh,
+//     $caption-ls,
+//     $caption-tt
+//   );
+//   color: $caption-c;
+// }
+
+// Overline
+.overline {
+  @include typography(
+    $overline-ff,
+    $overline-fz,
+    $overline-fw,
+    $overline-lh,
+    $overline-ls,
+    $overline-tt
+  );
+  color: $overline-c;
+
+  &--dark-medium-emphasis {
+    color: $c-dark-medium-emphasis;
+  }
+}

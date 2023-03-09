@@ -1,0 +1,14 @@
+// Aspect ratio mixins
+// -----------------------------------------------------------------------------
+
+@mixin aspect-ratio($wd, $ht) {
+  aspect-ratio: #{$wd} / #{$ht};
+
+  @supports not (aspect-ratio: $wd / $ht) {
+    &::after {
+      float: left;
+      padding-top: ($ht / $wd) * 100%;
+      content: "";
+    }
+  }
+}

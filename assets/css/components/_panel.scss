@@ -1,0 +1,54 @@
+// Panel
+// -----------------------------------------------------------------------------
+
+.panel {
+  background-color: $c-light;
+
+  &--centered {
+    padding-top: convert-px-to-rem(48);
+    padding-bottom: convert-px-to-rem(64);
+
+    @media ($medium-up) {
+      padding-top: convert-px-to-rem(64);
+      padding-bottom: convert-px-to-rem(72);
+    }
+
+    @media ($large-up) {
+      padding-top: convert-px-to-rem(104);
+      padding-bottom: convert-px-to-rem(96);
+    }
+  }
+
+  &--centered &__inner {
+    @media ($large-up) {
+      margin: 0 auto;
+      width: convert-px-to-rem(680);
+    }
+  }
+
+  &--reduced {
+    padding-top: convert-px-to-rem(48);
+    text-align: center;
+
+    @media ($medium-up) {
+      padding-top: convert-px-to-rem(64);
+    }
+
+    @media ($large-up) {
+      padding-top: convert-px-to-rem(104);
+    }
+  }
+
+  &--expanded {
+    padding-bottom: convert-px-to-rem(48);
+
+    @media ($large-up) {
+      padding-top: convert-px-to-rem(72);
+      padding-bottom: convert-px-to-rem(72);
+    }
+  }
+
+  &--primary-08 {
+    background-color: $c-primary-08;
+  }
+}

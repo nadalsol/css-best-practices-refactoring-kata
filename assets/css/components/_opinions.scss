@@ -1,0 +1,54 @@
+// Opinions
+// -----------------------------------------------------------------------------
+
+.opinions {
+  &__title {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-bottom: convert-px-to-rem(32);
+
+    > .h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__value {
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating {
+    padding: convert-px-to-rem(8);
+
+    &.overline {
+      margin-bottom: 0;
+    }
+  }
+
+  &__score {
+    margin-bottom: 0;
+    margin-left: convert-px-to-rem(4);
+    padding: convert-px-to-rem(8);
+    background-color: $c-primary;
+    border-radius: $brr-medium;
+
+    &.h6 {
+      margin-bottom: 0;
+    }
+  }
+
+  // &__content {
+  //   //
+  // }
+
+  &__actions {
+    > .h5 {
+      margin-bottom: convert-px-to-rem(4);
+    }
+
+    > .h6 {
+      margin-bottom: 0;
+    }
+  }
+}

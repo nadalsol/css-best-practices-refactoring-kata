@@ -1,0 +1,39 @@
+// No public page styles
+// -----------------------------------------------------------------------------
+//
+// Allow developers, designers and content creators to see the big picture of
+// the site (landing pages, blog posts, and so on…) at a glance.
+//
+// Used in:
+//
+// * [Available Pages](/available-pages/)
+// * [Pattern Library](/pattern-library/)
+//
+
+.no-public {
+  padding-top: convert-px-to-rem(48);
+
+  > h1 {
+    margin-bottom: convert-px-to-rem(48);
+  }
+
+  > section {
+    border-top: 1px solid $c-dark-low-emphasis;
+    padding-top: convert-px-to-rem(12);
+    padding-bottom: convert-px-to-rem(12);
+    margin-bottom: convert-px-to-rem(48);
+  }
+
+  > section > h2 {
+    margin-bottom: convert-px-to-rem(32);
+    color: $c-dark-medium-emphasis;
+  }
+
+  > section > div {
+    margin-bottom: convert-px-to-rem(24);
+  }
+
+  .contrast {
+    background-color: $c-dark-low-emphasis;
+  }
+}

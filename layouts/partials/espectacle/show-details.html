@@ -1,0 +1,47 @@
+<!-- prettier-ignore -->
+<section class="show-details">
+  <div class="container">
+    <dl class="show-details-list">
+      <div class="show-details-list__group">
+        <!-- prettier-ignore -->
+        {{ partial "svg/place.svg" (dict "class" "show-details-list__icon") }}
+        <div>
+          <dt class="show-details-list__term subtitle-1">Lloc</dt>
+          <dd class="show-details-list__desc body-1">
+            {{ if .where }}{{ .where }}{{ else }}-{{ end }}
+          </dd>
+        </div>
+      </div>
+      <div class="show-details-list__group">
+        <!-- prettier-ignore -->
+        {{ partial "svg/event.svg" (dict "class" "show-details-list__icon") }}
+        <div>
+          <dt class="show-details-list__term subtitle-1">Horaris</dt>
+          <dd class="show-details-list__desc body-1">
+            {{ if .when }}{{ .when }}{{ else }}-{{ end }}
+          </dd>
+        </div>
+      </div>
+      <div class="show-details-list__group">
+        <!-- prettier-ignore -->
+        {{ partial "svg/schedule.svg" (dict "class" "show-details-list__icon") }}
+        <div>
+          <dt class="show-details-list__term subtitle-1">Duració</dt>
+          <dd class="show-details-list__desc body-1">
+            {{ if .duration }}{{ .duration }}{{ else }}-{{ end }}
+          </dd>
+        </div>
+      </div>
+      <div class="show-details-list__group">
+        <!-- prettier-ignore -->
+        {{ partial "svg/sell.svg" (dict "class" "show-details-list__icon") }}
+        <div>
+          <dt class="show-details-list__term subtitle-1">Preu</dt>
+          <dd class="show-details-list__desc body-1">
+            {{ if .price }}{{ .price }}{{ else }}-{{ end }}
+          </dd>
+        </div>
+      </div>
+    </dl>
+  </div>
+</section>

@@ -1,0 +1,76 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__row">
+      <div class="footer__col">
+        <span class="footer__logo logo">
+          <!-- prettier-ignore -->
+          {{ partial "svg/arnauvilardebo-logo.svg" (dict "class" "logo__img" "fill" "#111") }}
+        </span>
+        <nav>
+          <ul class="footer__list body-1">
+            <li class="footer__item">
+              <a
+                class="footer__link"
+                href="{{ .Site.BaseURL }}repertori/"
+                >Repertori</a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="{{ .Site.BaseURL }}biografia/"
+                >Biografia</a
+              >
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="{{ .Site.BaseURL }}coses-del-cel/"
+                >Coses del cel</a
+              >
+            </li>
+            <li class="footer__item">
+              <a
+                class="footer__link"
+                href="http://elditdecolom.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >El dit de Colom</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <ul class="footer__list body-1">
+          <li class="footer__item body-1--dark-medium-emphasis body-1--bold">
+            Contacte
+          </li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="mailto:{{ .Site.Params.companyEmail }}"
+            >
+              {{ .Site.Params.companyEmail }}
+            </a>
+          </li>
+          <li class="footer__item">
+            <a
+              class="footer__link"
+              href="tel:{{ replaceRE "(\\s)" "" .Site.Params.companyPhone }}"
+            >
+              +{{ .Site.Params.companyPhone }}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <!-- prettier-ignore -->
+        {{ partial "social-media-set.html" . }}
+      </div>
+      <div class="footer__col">
+        <ul class="footer__list body-1">
+          <li class="footer__item footer__item--right">
+            © {{ .Site.Title }} 2016-{{ now.Format "2006" }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

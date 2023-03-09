@@ -1,0 +1,12 @@
+// Link mixins
+// -----------------------------------------------------------------------------
+//
+// 1. Ensuring same appearance for `<div>` and `<a>`.
+//
+
+// 1
+@mixin block-link($display: block) {
+  display: $display;
+  color: inherit;
+  text-decoration: none;
+}

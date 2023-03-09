@@ -1,0 +1,30 @@
+{{ define "main" }}
+<!-- prettier-ignore -->
+{{ $showPublishDate := .PublishDate.Format "2006-01-02" }}
+{{ $showTitle := .Title }}
+{{ $showDescription := .Description }}
+{{ $showContent := .Content }}
+{{ $showActive := .Params.active }}
+{{ $showImage := .Params.image }}
+{{ $showVideoUrl := .Params.video_url }}
+{{ $showWhere := .Params.where | safeHTML }}
+{{ $showWhen := .Params.when | safeHTML }}
+{{ $showDuration := .Params.duration }}
+{{ $showPrice := .Params.price | safeHTML }}
+{{ $showTicketsUrl := .Params.tickets_url }}
+{{ $showOpinionTitle := .Params.opinion_title }}
+{{ $showOpinionRating := .Params.opinion_rating }}
+{{ $showOpinionScore := .Params.opinion_score }}
+{{ $showOpinionQuoteAuthor := .Params.opinion_quote_author }}
+{{ $showOpinionQuoteDate := .Params.opinion_quote_date }}
+{{ $showOpinionQuoteDesc := .Params.opinion_quote_desc }}
+{{ $showOpinionMoreUrl := .Params.opinion_more_url }}
+{{ $companyPhone := .Site.Params.companyPhone }}
+
+{{ partial "espectacle/hero.html" (dict "image" $showImage "title" $showTitle "desc" $showDescription) }}
+{{ partial "espectacle/show-details.html" (dict "where" $showWhere "when" $showWhen "duration" $showDuration "price" $showPrice) }}
+{{ partial "espectacle/show-video.html" (dict "videoUrl" $showVideoUrl) }}
+{{ partial "espectacle/show-content.html" (dict "content" $showContent "active" $showActive "phone" $companyPhone "ticketsUrl" $showTicketsUrl) }}
+{{ partial "espectacle/show-opinions.html" (dict "opinionTitle" $showOpinionTitle "opinionRating" $showOpinionRating "opinionScore" $showOpinionScore "opinionQuoteAuthor" $showOpinionQuoteAuthor "opinionQuoteDate" $showOpinionQuoteDate "opinionQuoteDesc" $showOpinionQuoteDesc "opinionMoreUrl" $showOpinionMoreUrl) }}
+{{ partial "featured.html" (dict "class" "panel--centered") }}
+{{ end }}

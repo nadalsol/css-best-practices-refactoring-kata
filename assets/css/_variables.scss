@@ -1,0 +1,331 @@
+// Arnau Vilardebò variables
+// -----------------------------------------------------------------------------
+//
+// Naming conventions used for variables inspired by [ZenCSSProperties]
+//
+// Some of the prefixes used:
+// * b = border
+// * bg = background;
+// * c = color
+// * ff = font-family
+// * fz = font-size
+//
+
+// Base
+// -----------------------------------------------------------------------------
+// Border radius
+$brr-small: 0.125rem;
+$brr-medium: 0.25rem;
+$brr-large: 0.5rem;
+$brr-base: $brr-medium;
+
+// Colors
+$c-dark: #000;
+$c-light: #fff;
+
+$c-dark-high-emphasis: rgba(0, 0, 0, 0.87);
+$c-dark-medium-emphasis: rgba(0, 0, 0, 0.54);
+$c-dark-disabled-emphasis: rgba(0, 0, 0, 0.38);
+$c-dark-low-emphasis: rgba(0, 0, 0, 0.26);
+$c-dark-lower-emphasis: rgba(0, 0, 0, 0.12);
+
+$c-light-high-emphasis: rgba(255, 255, 255, 0.87);
+$c-light-medium-emphasis: rgba(255, 255, 255, 0.54);
+$c-light-disabled-emphasis: rgba(255, 255, 255, 0.38);
+$c-light-low-emphasis: rgba(255, 255, 255, 0.26);
+$c-light-lower-emphasis: rgba(255, 255, 255, 0.12);
+
+$c-primary: #c00000;
+$c-primary-08: rgba($c-primary, 0.08);
+$c-primary-12: rgba($c-primary, 0.12);
+
+$c-secondary: #111;
+
+$c-gray-100: #161616;
+// $c-gray-90: #262626;
+// $c-gray-80: #393939;
+// $c-gray-70: #525252;
+// $c-gray-60: #6f6f6f;
+// $c-gray-50: #8d8d8d;
+// $c-gray-40: #a8a8a8;
+// $c-gray-30: #c6c6c6;
+$c-gray-20: #e0e0e0;
+$c-gray-10: #f2f2f2;
+
+// Scaffolding
+// $fonts-path: "/fonts/";
+$icons-path: "/svg/";
+$img-path: "/images/";
+
+$body-bg: $c-light;
+$body-c: $c-dark-high-emphasis;
+
+// Fonts
+$ff-primary: "Source Sans Pro", sans-serif;
+$ff-secondary: "Poppins", sans-serif;
+$ff-base: $ff-primary;
+
+$fz-base: 1rem; // 16px
+$fz-12: 0.75rem;
+$fz-13: 0.8125rem;
+$fz-14: 0.875rem;
+$fz-16: $fz-base;
+$fz-18: 1.125rem;
+$fz-20: 1.25rem;
+$fz-24: 1.5rem;
+// $fz-32: 2rem;
+$fz-34: 2.125rem;
+$fz-48: 3rem;
+// $fz-64: 4rem;
+// $fz-96: 6rem;
+// $fz-128: 8rem;
+
+$fw-base: 400; // regular
+// $fw-thin: 100;
+// $fw-light: 300;
+$fw-regular: $fw-base;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+// $fw-black: 900;
+
+$lh-base: 1.5;
+$lh-3xsmall: 1.17647;
+$lh-2xsmall: 1.25;
+$lh-xsmall: 1.33333;
+$lh-small: 1.42857;
+$lh-medium: $lh-base;
+$lh-large: 1.6;
+$lh-xlarge: 1.7;
+$lh-2xlarge: 1.8;
+
+// Media queries
+$screen-xs-min: 0;
+$screen-sm-min: 20rem; // 320px
+$screen-md-min: 31.25rem; // 500px
+$screen-lg-min: 64rem; // 1024px;
+
+$xsmall-up: "min-width:#{$screen-xs-min}";
+$small-up: "min-width:#{$screen-sm-min}";
+$medium-up: "min-width:#{$screen-md-min}";
+$large-up: "min-width:#{$screen-lg-min}";
+
+$medium-down: "max-width:#{$screen-md-min - 0.0625rem}"; // - 1px
+
+// Z-index table
+// $zi-50: 50;
+$zi-100: 100;
+// $zi-200: 200;
+// $zi-300: 300;
+// $zi-400: 400;
+// $zi-500: 500;
+$zi-600: 600;
+// $zi-700: 700;
+$zi-800: 800;
+// $zi-900: 900;
+// $zi-1000: 1000;
+
+// Components
+// -----------------------------------------------------------------------------
+//
+// Button
+//
+$button-ff: $ff-secondary;
+$button-fz: $fz-14;
+$button-fw: $fw-semi-bold;
+$button-lh: $lh-xlarge;
+$button-ls: 0.1px;
+$button-tt: none;
+
+$button-fz-large: $fz-18;
+
+$button-primary-bg: $c-primary;
+$button-primary-br: $button-primary-bg;
+$button-primary-c: $c-light;
+
+$button-primary-hover-bg: desaturate($button-primary-bg, 30%);
+$button-primary-hover-br: $button-primary-hover-bg;
+$button-primary-hover-c: $c-light;
+
+$button-secondary-bg: $c-secondary;
+$button-secondary-br: $button-secondary-bg;
+$button-secondary-c: $c-light;
+
+$button-secondary-hover-bg: lighten($button-secondary-bg, 15%);
+$button-secondary-hover-br: $button-secondary-hover-bg;
+$button-secondary-hover-c: $c-light;
+
+$button-ghost-bg: transparent;
+$button-ghost-br: $c-primary;
+$button-ghost-c: $button-ghost-br;
+
+$button-ghost-hover-bg: $c-primary-08;
+$button-ghost-hover-br: $c-primary;
+$button-ghost-hover-c: $button-ghost-hover-br;
+
+$button-transparent-bg: transparent;
+$button-transparent-br: transparent;
+$button-transparent-c: $c-light;
+
+$button-transparent-hover-bg: $c-light-lower-emphasis;
+$button-transparent-hover-br: transparent;
+$button-transparent-hover-c: $c-light;
+
+$button-disabled-c: $c-dark-disabled-emphasis;
+
+//
+// Chip
+//
+$chip-ff: $ff-primary;
+$chip-fz: $fz-13;
+$chip-fw: $fw-semi-bold;
+$chip-lh: $lh-2xsmall;
+$chip-ls: 0.25px;
+$chip-tt: none;
+$chip-c: $body-c;
+$chip-bg: $c-dark-lower-emphasis;
+
+//
+// Container
+//
+$container-mxwd: 75rem; // 1200px;
+
+//
+// Cookie message
+//
+$cookie-message-ht: 10rem; // 160px
+$cookie-message-ht-medium-up: 4.5rem; // 72px
+
+//
+// Header
+//
+$header-ht: 3.75rem; // 60px
+$header-bg: $c-primary;
+$header-zi: $zi-100;
+
+//
+// Link
+//
+$link-fw: $fw-semi-bold;
+$link-c: $c-primary;
+$link-td: none;
+$link-hover-td: underline;
+
+//
+// Logo
+//
+$logo-wd: 70%;
+$logo-ht: auto;
+
+$logo-wd-medium-up: auto;
+$logo-ht-medium-up: 2rem;
+
+//
+// Social media logo
+//
+$social-logo-wd: 2.5rem;
+$social-logo-ht: 2.5rem;
+$social-logo-icon-wd: 1.5rem;
+$social-logo-icon-ht: 1.5rem;
+
+//
+// Typography
+//
+// $h1-ff: $ff-primary;
+// $h1-fz: $fz-5xlarge;
+// $h1-fw: $fw-light;
+// $h1-lh: $lh-base;
+// $h1-ls: -1.5px;
+// $h1-tt: none;
+// $h1-c: $body-c;
+
+// $h2-ff: $ff-primary;
+// $h2-fz: $fz-4xlarge;
+// $h2-fw: $fw-light;
+// $h2-lh: $lh-base;
+// $h2-ls: -0.5px;
+// $h2-tt: none;
+// $h2-c: $body-c;
+
+$h3-ff: $ff-secondary;
+$h3-fz: $fz-34;
+$h3-fw: $fw-bold;
+$h3-lh: $lh-3xsmall;
+$h3-ls: normal;
+$h3-tt: none;
+$h3-c: $body-c;
+
+$h3-fz-md: $fz-48;
+$h3-lh-md: $lh-2xsmall;
+
+$h4-ff: $ff-secondary;
+$h4-fz: $fz-34;
+$h4-fw: $fw-semi-bold;
+$h4-lh: $lh-2xsmall;
+$h4-ls: 0.25px;
+$h4-tt: none;
+$h4-c: $body-c;
+
+$h5-ff: $ff-secondary;
+$h5-fz: $fz-24;
+$h5-fw: $fw-medium;
+$h5-lh: $lh-3xsmall;
+$h5-ls: normal;
+$h5-tt: none;
+$h5-c: $body-c;
+
+$h6-ff: $ff-secondary;
+$h6-fz: $fz-20;
+$h6-fw: $fw-regular;
+$h6-lh: $lh-2xsmall;
+$h6-ls: 0.15px;
+$h6-tt: none;
+$h6-c: $body-c;
+
+$subtitle-1-ff: $ff-secondary;
+$subtitle-1-fz: $fz-16;
+$subtitle-1-fw: $fw-semi-bold;
+$subtitle-1-lh: $lh-2xsmall;
+$subtitle-1-ls: 0.1px;
+$subtitle-1-tt: none;
+$subtitle-1-c: $body-c;
+
+$subtitle-2-ff: $ff-secondary;
+$subtitle-2-fz: $fz-14;
+$subtitle-2-fw: $fw-medium;
+$subtitle-2-lh: $lh-3xsmall;
+$subtitle-2-ls: 0.25px;
+$subtitle-2-tt: none;
+$subtitle-2-c: $body-c;
+
+$body-1-ff: $ff-primary;
+$body-1-fz: $fz-16;
+$body-1-fw: $fw-regular;
+$body-1-lh: $lh-2xsmall;
+$body-1-ls: 0.25px;
+$body-1-tt: none;
+$body-1-c: $body-c;
+
+// $body-2-ff: $ff-primary;
+// $body-2-fz: $fz-small;
+// $body-2-fw: $fw-regular;
+// $body-2-lh: $lh-base;
+// $body-2-ls: 0.25px;
+// $body-2-tt: none;
+// $body-2-c: $body-c;
+
+// $caption-ff: $ff-primary;
+// $caption-fz: $fz-xsmall;
+// $caption-fw: $fw-regular;
+// $caption-lh: $lh-base;
+// $caption-ls: 0.4px;
+// $caption-tt: none;
+// $caption-c: $body-c;
+
+$overline-ff: $ff-primary;
+$overline-fz: $fz-12;
+$overline-fw: $fw-regular;
+$overline-lh: $lh-base;
+$overline-ls: 1px;
+$overline-tt: uppercase;
+$overline-c: $body-c;

@@ -1,0 +1,21 @@
+// Scaffolding
+// -----------------------------------------------------------------------------
+//
+// html: 100% = 1rem = 16px
+//
+// 1. Smoothly animates the transition when a user clicks a link that targets
+//    an anchored position within a scrolling box.
+//
+
+html {
+  scroll-behavior: smooth; // 1
+}
+
+body {
+  background-color: $body-bg;
+  color: $body-c;
+}
+
+svg {
+  fill: $c-gray-10;
+}

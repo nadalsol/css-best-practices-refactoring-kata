@@ -1,0 +1,74 @@
+// Banner
+// -----------------------------------------------------------------------------
+
+.banner {
+  display: flex;
+  align-items: flex-end;
+  min-height: calc(100vh - #{$header-ht});
+  transition: min-height 0.25s ease-in-out;
+
+  @media ($medium-up) {
+    min-height: 30vh;
+  }
+
+  > .container {
+    width: 100%;
+  }
+
+  // &__title {
+  //   //
+  // }
+
+  &--biografia {
+    @include bg-img(
+      "page/biografia/",
+      "banner-01",
+      "jpg",
+      #523c2e,
+      #4b2f1c,
+      #514b46,
+      #56504c,
+      30%,
+      center,
+      cover
+    );
+
+    @media ($large-up) {
+      background-position-x: center;
+    }
+  }
+
+  &--coses-del-cel {
+    @include bg-img(
+      "page/coses-del-cel/",
+      "banner-01",
+      "jpg",
+      #0e2951,
+      #0a4475,
+      #016a87,
+      #006079,
+      center,
+      center,
+      cover
+    );
+  }
+
+  &--repertori {
+    @include bg-img(
+      "page/repertori/",
+      "banner-01",
+      "jpg",
+      #1d0f08,
+      #180d08,
+      #1f130c,
+      #4b2113,
+      right,
+      center,
+      cover
+    );
+
+    @media ($large-up) {
+      background-position-x: center;
+    }
+  }
+}

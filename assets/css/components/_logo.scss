@@ -1,0 +1,16 @@
+// Site logo
+// -----------------------------------------------------------------------------
+
+.logo {
+  display: inline-flex;
+
+  @include state-focus($c-light, 0);
+
+  &__img {
+    @include size($logo-wd, $logo-ht);
+
+    @media ($medium-up) {
+      @include size($logo-wd-medium-up, $logo-ht-medium-up);
+    }
+  }
+}

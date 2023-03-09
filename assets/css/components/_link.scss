@@ -1,0 +1,40 @@
+// Link
+// -----------------------------------------------------------------------------
+//
+// https://the-carbon-components.netlify.app/?nav=link
+//
+
+.link {
+  font-weight: $link-fw;
+  color: $link-c;
+  text-decoration: $link-td;
+
+  &:hover {
+    text-decoration: $link-hover-td;
+  }
+
+  @include state-focus($focus-offset: 0);
+
+  &__icon-start {
+    margin-right: convert-px-to-rem(8);
+    fill: currentColor;
+  }
+
+  &--light {
+    color: $c-light;
+    @include state-focus($c-light, 0);
+  }
+
+  &--iconised {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &--disabled {
+    pointer-events: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

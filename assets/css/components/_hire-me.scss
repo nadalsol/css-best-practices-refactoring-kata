@@ -1,0 +1,41 @@
+// Hire me
+// -----------------------------------------------------------------------------
+
+.hire-me {
+  background-color: $c-primary;
+
+  @media ($large-up) {
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.2),
+      0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12);
+  }
+
+  &__content {
+    padding: convert-px-to-rem(48) convert-px-to-rem(16);
+
+    @media ($medium-up) {
+      padding: convert-px-to-rem(64) convert-px-to-rem(16) convert-px-to-rem(48);
+    }
+
+    @media ($large-up) {
+      display: flex;
+      flex: 1 0 50%;
+      justify-content: center;
+      flex-direction: column;
+      padding: convert-px-to-rem(48) convert-px-to-rem(100);
+    }
+  }
+
+  &__media {
+    display: flex;
+
+    @media ($large-up) {
+      flex: 1 0 50%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

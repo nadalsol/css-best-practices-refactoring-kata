@@ -1,0 +1,71 @@
+// Footer
+// -----------------------------------------------------------------------------
+
+.footer {
+  padding-top: convert-px-to-rem(12);
+  padding-bottom: convert-px-to-rem(32);
+  background-color: $c-gray-10;
+
+  &__row {
+    @media ($large-up) {
+      display: flex;
+      align-items: flex-end;
+      margin-left: convert-px-to-rem(-16);
+      margin-right: convert-px-to-rem(-16);
+    }
+  }
+
+  &__col {
+    @media ($large-up) {
+      width: 25%;
+      margin-left: convert-px-to-rem(16);
+      margin-right: convert-px-to-rem(16);
+    }
+  }
+
+  &__col + &__col {
+    margin-top: convert-px-to-rem(32);
+
+    @media ($medium-up) {
+      margin-top: convert-px-to-rem(48);
+    }
+
+    @media ($large-up) {
+      margin-top: 0;
+    }
+  }
+
+  &__logo {
+    margin-bottom: convert-px-to-rem(48);
+  }
+
+  &__list,
+  .body-1 {
+    margin-bottom: 0;
+  }
+
+  &__item {
+    &--right {
+      text-align: left;
+
+      @media ($large-up) {
+        text-align: right;
+      }
+    }
+  }
+
+  &__item + &__item {
+    margin-top: convert-px-to-rem(16);
+  }
+
+  &__link {
+    color: $body-1-c;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @include state-focus($focus-offset: 0);
+  }
+}

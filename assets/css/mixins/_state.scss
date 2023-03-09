@@ -1,0 +1,13 @@
+// State mixins
+// -----------------------------------------------------------------------------
+
+// `:focus` state for text and icon buttons
+@mixin state-focus($focus-c: $c-primary, $focus-offset: -2px) {
+  outline-color: transparent;
+  transition: 0.15s cubic-bezier(0.2, 0, 0.38, 0.9);
+
+  &:focus {
+    outline: 2px solid $focus-c;
+    outline-offset: $focus-offset;
+  }
+}

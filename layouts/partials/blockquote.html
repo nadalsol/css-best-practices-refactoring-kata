@@ -1,0 +1,17 @@
+<figure class="blockquote">
+  <!-- prettier-ignore -->
+  <blockquote
+    class="blockquote__block h4 h4--dark-medium-emphasis"
+    {{ with .citeUrl }}cite="{{ . }}"{{ end }}
+  >
+    <!-- prettier-ignore -->
+    {{ with .text }}
+    <p class="blockquote__quote">{{ . }}</p>
+    {{ end }}
+  </blockquote>
+  <figcaption class="blockquote__caption subtitle-1">
+    <!-- prettier-ignore -->
+    {{ with .author }}–{{ . }},{{ end }}
+    {{ with .citeText }}<cite>{{ . }}</cite>{{ end }}
+  </figcaption>
+</figure>

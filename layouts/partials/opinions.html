@@ -1,0 +1,59 @@
+<!-- prettier-ignore -->
+{{ if .opinionQuoteDesc }}
+<div class="opinions">
+  <div class="opinions__title">
+    <h2 class="h4">
+      Opinions
+      <!-- prettier-ignore -->
+      {{ with .opinionTitle }}
+      <span class="h4__dark-high-emphasis">{{ . }}</span>
+      {{ end }}
+    </h2>
+    <div class="opinions__value">
+      <!-- prettier-ignore -->
+      {{ with .opinionRating }}
+      <span class="opinions__rating overline">{{ . }}</span>
+      {{ end }}
+      <!-- prettier-ignore -->
+      {{ with .opinionScore }}
+      <span class="opinions__score h6 h6--light">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="opinions__content">
+    <!-- prettier-ignore -->
+    {{ partial "blockquote.html" (dict "citeUrl" .opinionMoreUrl "text" .opinionQuoteDesc "author" .opinionQuoteAuthor "citeText" .opinionQuoteDate) }}
+  </div>
+
+  {{ if and (.opinionTitle) (.opinionMoreUrl) }}
+  <div class="opinions__actions">
+    <h3 class="h5">Llegir més opinions</h3>
+    <p class="h6">
+      <a
+        class="link link--iconised"
+        href="{{ .opinionMoreUrl }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <!-- prettier-ignore -->
+        {{ partial "svg/campaign.svg" (dict "class" "link__icon-start") }}
+        {{ .opinionTitle }}
+      </a>
+    </p>
+  </div>
+  {{ end }}
+</div>
+{{ else }}
+<div class="opinions">
+  <div class="opinions__title">
+    <h2 class="h4">Opinions</h2>
+  </div>
+
+  <div class="opinions__content">
+    <p class="body-1 u-margin-bottom-0">
+      S'han trobat <b>0 opinions</b> per a aquest espectacle.
+    </p>
+  </div>
+</div>
+{{ end }}

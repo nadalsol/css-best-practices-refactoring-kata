@@ -1,0 +1,8 @@
+User-agent: *
+{{/* robotstxt.org - if ENV production variable is false robots will be disallowed */}}
+{{ if hugo.IsProduction }}
+Disallow: /404/
+Disallow: /pattern-library/
+{{ else }}
+Disallow: /
+{{ end }}
