@@ -29,8 +29,9 @@
 
 1. Clone GitHub repo: `git clone git@github.com:nadalsol/css-best-practices-refactoring-kata`
 2. Jump into project's directory: `cd css-best-practices-refactoring-kata`
-3. Start the Hugo server (with drafts enabled): `npm start` (which launches `hugo server -D`)
-4. Navigate to http://localhost:1313/
+3. Install project dependencies: `npm install`
+4. Start the Hugo server (with drafts enabled): `npm start` (which launches `hugo server -D`)
+5. Navigate to http://localhost:1313/
 
 ## Kata Resources
 
