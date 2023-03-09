@@ -1,125 +1,45 @@
-# Arnau Vilardebò v3
-
-1. [Overview](#overview)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Deploy](#deploy)
-5. [Exluding pages from sitemap and robots](#exluding-pages-from-sitemap-and-robots)
-6. [Debugging](#debugging)
+# CSS Best Practices Refactoring Kata
 
 ## Overview
 
-This site has been created using [Hugo](https://gohugo.io/), [GitHub ](https://github.com/) and [GitHub Pages](https://pages.github.com/).
+- I see junior and senior devs. suffering with CSS over time, also hating it 😩
+- We all know CSS can be hard to debug 🤔 🐞
+- CSS is a core pillar of the [W3C](https://www.w3.org/Style/CSS/).
+- CSS is awesome! You just need to understand how it works (as any other language).
 
-- **Hugo** is one of the most popular open-source static site generators.
-- **GitHub** is a development platform where you can host and review code.
-- **GitHub Pages** is a static site hosting service designed to host your
-  personal, organization, or project pages directly from a GitHub repository.
+## Kata Purpose
 
-## Installation
+- Promote code reusability, scalability and maintainability.
+- Enjoy writing good CSS code, using something standard (no over complexities).
+- Embrace CSS ♥️
 
-From [Hugo > Getting Started](https://gohugo.io/getting-started/quick-start/) docs.
+## Tech Stack
 
-1. Install [Hugo](https://gohugo.io/):
+- This Kata works with [Hugo](https://gohugo.io/) and [Sass](https://sass-lang.com/), as the later is [kind of an industry standard](https://2022.stateofcss.com/en-US/other-tools/). Also because its learning curve is lower than other tools.
+- There are other options out there to deal with CSS: pre-processors (Sass, Less…), post-processors (PostCSS), frameworks (Tailwind, Bootstrap, Foundation…), CSS Modules, CSS in JS (Styled components, Emotion…), etc…
+- If you prefer to write this Kata with plain/vanilla CSS, feel free to do it\*
 
-```
-$ brew install hugo
-```
+(\*) Just write plain CSS within the existing `.scss` files and the code should work 😉
 
-2. Verify your install:
+## Important!
 
-```
-$ hugo version
-```
+- This is a refactoring Kata so please **focus on improving the CSS code**, not the UI _look&feel_.
 
-3. Clone GitHub repo:
+## Kata Install and Setup
 
-```
-$ git clone git@github.com:nadalsol/arnauvilardebo-v3
-```
+1. Clone GitHub repo: `git clone git@github.com:nadalsol/css-best-practices-refactoring-kata`.
+2. Jump into project's directory: `cd css-best-practices-refactoring-kata`.
+3. Start the Hugo server (with drafts enabled): `npm start` (which launches `hugo server -D`).
+4. Navigate to http://localhost:1313/
 
-Is [VS Code](https://code.visualstudio.com/) your editor of choice? Consider installing [Hugo Language and Syntax Support](https://marketplace.visualstudio.com/items?itemName=budparr.language-hugo-vscode) for syntax highlighting and other goodies.
+## Kata Resources
 
-## Usage
+- [Kata Slides](https://docs.google.com/presentation/d/1Et1VnhMH1DKiWya7v2pNRPTsXCosXsJhY4A3gi7K4Jw/edit?usp=sharing)
+- [Kata Repo](https://github.com/nadalsol/css-best-practices-refactoring-kata)
 
-1. Change into your new directory:
+### External Resources
 
-```
-$ cd arnauvilardebo-v3
-```
-
-2. Start the Hugo server (with drafts enabled):
-
-```
-$ hugo server -D // or use `$ npm start` instead
-```
-
-3. Navigate to your new site at http://localhost:1313/
-
-## Deploy
-
-Merging `development` branch into `master` branch will trigger GitHub Actions, generating a new build and deploying it to Prod:
-
-```bash
-$ git co master
-$ git pull --rebase origin master
-$ git merge development
-```
-
-Alternatively, you can create a GitHub Pull Request (PR) that will trigger the build proceess only, without deploying your changes yet (useful to detect possible build errors, before deploying). Once your build is generated without any errors, you can go ahead and merge your PR into `master` to trigger the deployment.
-
-Check "arnauvilardebo-v3/.github/workflows/gh-pages.yml" for further details.
-
-## Exluding pages from sitemap and robots
-
-Any new page/post gets programatically added to "sitemap.xml", in order to provide some information to search engines.
-
-If you want to exclude a particular page/post form the Sitemap, just add the following metadata `sitemap_exclude: true`, at the beginning of your page/post (markdown) file.
-
-Example:
-
-```
----
-title: "Pattern Library"
-date: 2020-07-22T17:26:02+02:00
-draft: false
-type: "page"
-layout: "pattern-library"
-sitemap_exclude: true
----
-```
-
-Alternatively, you can add the page/post to your "layouts/robots.txt", to prevent search engines from indexing it.
-
-Example:
-
-```
-User-agent: *
-{{/* robotstxt.org - if ENV production variable is false robots will be disallowed */}}
-{{ if hugo.IsProduction }}
-Disallow: /pattern-library/
-{{ else }}
-Disallow: /
-{{ end }}
-```
-
-## Debugging
-
-- [Hugo docs > Template Debugging](https://gohugo.io/templates/template-debugging/)
-- [Debugging Hugo Site Data and Page Variables](https://rimdev.io/debugging-hugo-site-data/)
-
-You can also use this for debugging `Params`:
-
-```
-{{ with .Params }}
-  {{ . }}
-{{ end }}
-```
-
-Or even better…
-
-```
-{{ with .Params | jsonify }}
-  {{ . }}
-{{ end }}
-```
+- [CSS Best Practices (by Nadal Soler) - Tech Talk Slides](https://github.com/nadalsol/css-best-practices)
+- [CSS Best Practices (by Nadal Soler) - Tech Talk Video](https://www.canva.com/design/DAFbOGSCm7s/PAoKzDBY0CVpOiDTZOVJLw/watch?utm_content=DAFbOGSCm7s)
+- [The reason why many people struggle with CSS (by Kevin Powell)](https://www.youtube.com/watch?v=A6IpZ2GlMM4)
+- [Por qué no uso "Tailwind CSS" en mi código](https://www.youtube.com/watch?v=lURtd-oneaM) (Spanish)
