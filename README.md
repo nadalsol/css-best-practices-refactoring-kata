@@ -1,4 +1,4 @@
-# CSS Best Practices Refactoring Kata
+# CSS Best Practices Refactoring Kata ♻️ 🧑🏼‍🎨
 
 ## Overview
 
@@ -21,7 +21,7 @@
 
 (\*) Just write plain CSS within the existing `.scss` files and the code should work 😉
 
-## Keep in mind
+## Keep in Mind
 
 - This is a refactoring Kata so please **focus on improving the CSS code**, not the UI _look&feel_.
 
