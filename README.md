@@ -35,8 +35,8 @@
 
 ## Kata Resources
 
-- [Kata Slides](https://docs.google.com/presentation/d/1Et1VnhMH1DKiWya7v2pNRPTsXCosXsJhY4A3gi7K4Jw/edit?usp=sharing)
-- [Kata Repo](https://github.com/nadalsol/css-best-practices-refactoring-kata)
+- [Kata Presentation](https://docs.google.com/presentation/d/1Et1VnhMH1DKiWya7v2pNRPTsXCosXsJhY4A3gi7K4Jw/edit?usp=sharing) (Google Slides)
+- [Kata Repo](https://github.com/nadalsol/css-best-practices-refactoring-kata) (GitHub)
 
 ### External Resources
 
